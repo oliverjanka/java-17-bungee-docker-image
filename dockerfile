@@ -1,7 +1,7 @@
 FROM eclipse-temurin:17-alpine AS builder
 RUN apk --no-cache add curl
 WORKDIR /build
-COPY server/ ./
+COPY ./ ./
 # Download BungeeCore
 RUN curl https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar -o BungeeCord.jar
 WORKDIR /build/modules
